@@ -1,4 +1,4 @@
-/* Seitenraster → Mit GRID */
+/* Seitenraster */
 .grid-container {
   display: grid;
   grid-template-rows: auto auto 1fr auto;  /* Kopf - Geschichte - Projekte - Kontakt */
@@ -8,7 +8,7 @@
   padding: 10px;
 }
 
-/* Überschriften Grösse → automatisch */
+/* Überschriften Grösse */
 h1 {
   font-size: clamp(1.5rem, 4vw, 3rem);
   text-align: center;
@@ -17,15 +17,6 @@ h1 {
 h2 {
   font-size: clamp(1.2rem, 3vw, 2rem);
 }
-
-
-/* Text Hervorhebung → Gelb / Rot */
-span {
-  color: rgb(255, 251, 0);
-  background-color: rgb(254, 0, 0);
-}
-
-
 
 
 /* Bereich für Geschichte = Bild + Text nebeneinander */
@@ -54,7 +45,7 @@ span {
 
 /* Hintergrund von ganze Seite */
 body {
-  background-image: url("./images/hintergrund/1.svg");
+  background-image: url("../images/background/1.svg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -81,7 +72,7 @@ body {
 }
 
 
-/* Projekte Bereich → horizontal scroll */
+/* Projekte Bereich horizontal scroll */
 .projekt-container {
   display: flex;
   overflow-x: auto;
@@ -128,7 +119,8 @@ body {
   position: absolute;
   top: 30px;
   right: 50px;
-  color: #fff;
+  color: #dbe200;
+  background-color: rgb(254, 0, 0);
   font-size: 40px;
   font-weight: bold;
   cursor: pointer;

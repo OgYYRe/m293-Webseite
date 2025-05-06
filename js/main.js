@@ -1,17 +1,17 @@
-// Liste aller Projekte
+// Liste alle Projekte
 const projekte = [
     {
-      bild: "images/projekte/ppp.png", 
+      bild: "../images/projekte/cpp.png", 
       titel: "C++",
       beschreibung: "Kleine App zur Zahlenprüfung"
     },
     {
-      bild: "images/projekte/powershell.png",
+      bild: "../images/projekte/powershell.png",
       titel: "powershell",
       beschreibung: "Ein Log-Event Programm"
     },
     {
-      bild: "images/projekte/test1.png",
+      bild: "../images/projekte/test1.png",
       titel: "X",
       beschreibung: "Testbild / Platzhalter"
     }
@@ -25,7 +25,7 @@ const projekte = [
   const popupBild = document.getElementById("popupBild");
   const closeBtn = document.querySelector("#bildPopup .close");
   
-  // Karten dynamisch erzeugen
+  // mach neue karten mit js
   projekte.forEach((projekt) => {
     const card = document.createElement("div");
     card.className = "projekt-card";
@@ -38,7 +38,7 @@ const projekte = [
   
     projektContainer.appendChild(card);
   
-    // Click-Event direkt ekleniyor
+    // klick sofort machen
     const img = card.querySelector("img");
     img.addEventListener("click", () => {
       popup.style.display = "block";
@@ -57,3 +57,33 @@ const projekte = [
     }
   });
   
+
+  //Formular 
+
+  function validateForm(){
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let message = document.getElementById("message").value;
+
+    if(name == ""){
+      alert("Bitte gib deinen Namen ein");
+      return false;
+    }
+    if(email == ""){
+      alert("Bitte gib deine E-Mail ein!");
+      return false;
+    }
+    if(message == ""){
+      alert("Bitte gib deine Nachricht ein");
+      return false;
+    }
+
+    if(!email.includes("@")|| !email.includes(".")){
+      alert("Bitte gib eine gültige E-Mailadresse ein!");
+      return false;
+    }
+
+    document.getElementById("result").innerText = "Danke, " + name + ". deine Nachricht wurde geschickt.";
+  return false;
+
+  }
