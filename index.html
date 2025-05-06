@@ -1,0 +1,91 @@
+<!-- Kommentar -->
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Oguzhan Cetinkaya</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+
+<body class="grid-container">
+
+  <!-- Logo (oben rechts) -->
+  <img src="../images/logo/logo.png" alt="Mein Logo" class="logo">
+
+  <!-- Überschrift -->
+  <header>
+    <h1 >Wer bin ich?</h1>
+  </header>
+
+  <!-- Geschichte Bereich -->
+  <main class="meine-geschichte">
+    <img src="../images/profilbild/profilbild.jpg" alt="Profilbild" />
+  
+    <div>
+      <h2>Meine Geschichte</h2>
+      <h3 id="meineGeschichte">
+        Mein Name ist Oguzhan Cetinkaya. Ich bin im Jahr 1992 in der Türkei geboren,
+          wo ich an der Universität Rechtwissenschaft studiert habe. Ich bin Anwalt.
+          Mein Interesse liegt mehr auf Mathematik, Technologie, deshalb habe ich mich entschieden,
+          Software-Entwickler zu sein. Dafür mache ich eine Berufslehre als Applikationsentwickler an der Benedict Schule.
+          Seit 3,5 Jahren lebe ich in der Schweiz. Ich fühle mich hier sehr wohl. 
+      </h3>
+    </div>
+  </main>
+
+  <!-- Projekte Bereich -->
+
+  <section class="projekte">
+    <h2>Meine Projekte von der Schule</h2>
+    <div class="projekt-container" id="projektContainer">
+
+      <!-- Karten kommen von JavaScript -->
+    </div>
+  </section>
+
+  <!-- Bild-Popup -->
+  <div id="bildPopup" class="popup" style="display: none;">
+    <span class="close">&times;</span>
+    <img class="popup-content" id="popupBild" />
+  </div>
+
+
+
+ <fieldset  class="kontaktformular">
+  <legend>Schnellkontakt-Formular</legend>
+  <form onsubmit="return validateForm()">
+    <label for="name"> Name: </label>
+    <input type="text" id="name" placeholder="Dein Name: ">
+    
+    <label for="email"> E-Mail: </label>
+    <input type="email" id="email" placeholder="abc123@xyz.com ">
+
+
+    <label for="message"> Nachricht: </label>
+    <textarea id="message" placeholder="Deine Nachricht: "></textarea>
+
+    <button type="submit">Senden</button>
+    
+  </form>
+
+  <div id="result"></div>
+ </fieldset >
+
+
+  <!-- Kontakt unten -->
+  <footer class="kontakt">
+    <h2>Kontakt</h2>
+    <ul>
+      <li>📧 <a href="mailto:cetinkaya-oguzhan@hotmail.com">cetinkaya-oguzhan@hotmail.com</a></li>
+      <li>🔗 <a href="https://www.linkedin.com/in/oguzhan-cetinkaya-39475a324" target="_blank">linkedin.com/in/oguzhan-cetinkaya-39475a324</a></li>
+      <li>🐱 <a href="https://github.com/OgYYRe" target="_blank">github.com/OgYYRe</a></li>
+      <li>📍 Zürich, Schweiz</li>
+      <a href="impressum.html">Impressum</a>
+
+    </ul>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>^ü'
+</html>
