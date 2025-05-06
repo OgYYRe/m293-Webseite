@@ -1,1 +1,162 @@
+/* Seitenraster */
+.grid-container {
+  display: grid;
+  grid-template-rows: auto auto 1fr auto;  /* Kopf - Geschichte - Projekte - Kontakt */
+  grid-template-columns: 1fr;              /* Nur 1 Spalte */
+  min-height: 100vh;                       /* Mindestens ganze Bildschirmhöhe */
+  gap: 20px;                                /* Abstand zwischen Bereichen */
+  padding: 10px;
+}
 
+/* Überschriften Grösse */
+h1 {
+  font-size: clamp(1.5rem, 4vw, 3rem);
+  text-align: center;
+}
+
+h2 {
+  font-size: clamp(1.2rem, 3vw, 2rem);
+}
+
+
+/* Bereich für Geschichte = Bild + Text nebeneinander */
+.meine-geschichte {
+  display: flex;
+  gap: 2vw;
+  align-items: center;
+}
+
+.meine-geschichte img {
+  width: clamp(150px, 20vw, 300px); 
+  height: auto;
+}
+
+.meine-geschichte div {
+  flex-grow: 1;
+}
+
+/* Textfarbe von Geschichte */
+#meineGeschichte {
+  color: tomato;
+  font-size: clamp(1rem, 2vw, 2rem);
+  line-height: 1.6; /* Zeilenabstand */
+}
+
+
+/* Hintergrund von ganze Seite */
+body {
+  background-image: url("../images/background/1.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
+/* Logo Position oben rechts */
+.logo {
+  position: absolute;
+  top: 3vh;
+  right: 3vw;
+  width: 8vw;
+  max-width: 100px;
+  height: auto;
+  z-index: 10;
+}
+
+
+/* Überschrift Projekte */
+.projekte h2 {
+  color: rgb(177, 27, 27);
+  padding: 4vh 0 2vh 4vw;
+  font-size: clamp(1.5rem, 3vw, 3rem);
+}
+
+
+/* Projekte Bereich horizontal scroll */
+.projekt-container {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 20px;
+  gap: 20px;
+}
+
+
+/* Projekte Bildgrösse */
+.projekt-card img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+
+/* Popup für Bilder */
+.popup {
+  position: fixed;
+  z-index: 100;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+/* Bild im Popup */
+.popup-content {
+  display: block;
+  margin: auto;
+  max-width: 80%;
+  max-height: 80%;
+}
+
+
+/* Schliessen (X) Symbol im Popup */
+.close {
+  position: absolute;
+  top: 30px;
+  right: 50px;
+  color: #dbe200;
+  background-color: rgb(254, 0, 0);
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
+/* Kontaktbereich unten */
+.kontakt {
+  background-color: #064420;
+  color: #ffffffcc;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.kontakt h2 {
+  margin-bottom: 20px;
+  font-size: 1.8em;
+  color: #ffffff;
+}
+
+.kontakt ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.kontakt li {
+  margin: 10px 0;
+  font-size: 1.1em;
+}
+
+.kontakt a {
+  color: #a4e6a4;
+  text-decoration: none;
+}
+
+.kontakt a:hover {
+  text-decoration: underline;
+}
